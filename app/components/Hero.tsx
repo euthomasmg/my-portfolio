@@ -18,30 +18,34 @@ export default function Hero() {
     <Box
       id="inicio"
       className="min-h-screen flex flex-col items-center justify-center text-center bg-black text-white relative overflow-hidden px-4"
+      sx={{
+        paddingTop: "2rem",   // ↓ menos espaço no topo (~32px)
+        paddingBottom: "2.5rem" // ↓ menos espaço no fundo (~40px)
+      }}
     >
       {/* FOTO */}
       <Avatar
-        src="/perfil.jpg" // coloque sua imagem em /public/perfil.jpg
+        src="/perfil.jpg"
         alt="Foto de perfil"
         sx={{
           width: 160,
           height: 160,
           border: "5px solid #FFD600",
           boxShadow: "0 0 25px rgba(255, 214, 0, 0.4)",
-          marginBottom: "2rem",
+          marginBottom: "1.25rem", // ↓ levemente reduzido
         }}
       />
 
       {/* NOME */}
       <Typography
-        variant="h3"
+        variant="h4"
         sx={{
           fontWeight: 700,
           fontFamily: "monospace",
           letterSpacing: 1,
         }}
       >
-        Thomas
+        Thomas Mayer Garcez
       </Typography>
 
       {/* SUBTÍTULO */}
@@ -50,15 +54,15 @@ export default function Hero() {
         sx={{
           color: "#ccc",
           fontFamily: "monospace",
-          marginTop: "0.5rem",
-          marginBottom: "2rem",
+          marginTop: "0.25rem",
+          marginBottom: "1.25rem",
         }}
       >
         {"</Desenvolvedor Fullstack>"}
       </Typography>
 
       {/* ÍCONES SOCIAIS */}
-      <Box className="flex gap-6 mt-2 mb-8">
+      <Box className="flex gap-5 mt-1 mb-5">
         <IconButton
           color="inherit"
           href="https://github.com/"
@@ -107,37 +111,46 @@ export default function Hero() {
       </Box>
 
       {/* MENU DE SEÇÕES */}
-      <Box className="flex flex-col mt-6 gap-5 text-base">
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "1.4rem",       // ↓ espaçamento mais compacto (~22px)
+          marginTop: "3rem",   // ↓ antes 4rem (~48px)
+          marginBottom: "3rem" // ↓ antes 4rem
+        }}
+      >
         {[
           { icon: <Person fontSize="small" />, label: "Sobre mim" },
           { icon: <EmojiObjects fontSize="small" />, label: "Minhas Soft Skills" },
           { icon: <Build fontSize="small" />, label: "Minhas Hard Skills" },
-          { icon: <Work fontSize="small" />, label: "Meus serviços contratáveis" },
           { icon: <Code fontSize="small" />, label: "Meus Projetos" },
         ].map((item, index) => (
-          <Box
+          <Typography
             key={index}
-            className="flex items-center gap-3 justify-center cursor-pointer transition-all"
+            component="div"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            gap={1.5}
+            fontFamily="monospace"
+            fontWeight={500}
+            color="#ccc"
             sx={{
-              color: "#ccc",
-              "&:hover": {
-                color: "#FFD600",
-                transform: "scale(1.05)",
-              },
+              cursor: "pointer",
+              transition: "0.3s",
+              "&:hover": { color: "#FFD600", transform: "scale(1.05)" },
             }}
           >
             {item.icon}
-            <Typography
-              variant="body1"
-              sx={{ fontFamily: "monospace", fontWeight: 500 }}
-            >
-              {item.label}
-            </Typography>
-          </Box>
+            {item.label}
+          </Typography>
         ))}
       </Box>
 
-      {/* FUNDO ESTRELADO SUTIL */}
+      {/* FUNDO ESTRELADO */}
       <Box
         className="absolute inset-0 -z-10"
         sx={{
