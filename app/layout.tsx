@@ -1,10 +1,8 @@
-import "./globals.css";
-import type { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Portfólio | Thomas",
-  description: "Portfólio desenvolvido com Next.js, Material UI e TailwindCSS",
-};
+import { ThemeProvider, CssBaseline } from "@mui/material";
+import darkBlueTheme from "./theme";
+import "./globals.css";
 
 export default function RootLayout({
   children,
@@ -13,7 +11,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body>{children}</body>
+      <body>
+        <ThemeProvider theme={darkBlueTheme}>
+          <CssBaseline />
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
