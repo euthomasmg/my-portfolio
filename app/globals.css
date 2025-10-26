@@ -2,13 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-/* --- Seus estilos globais opcionais --- */
+/* ===== CONFIGURAÇÕES GERAIS ===== */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
-  background-color: #f9fafb; /* cor neutra de fundo */
-  color: #111827; /* texto padrão */
+  margin: 0;
+  padding: 0;
+  background-color: #0A192F; /* azul escuro do tema */
+  color: #E6F1FF;           /* texto principal do tema */
+  font-family: monospace;   /* combina com o tema MUI */
+}
+
+/* ===== SELEÇÃO DE TEXTO ===== */
+::selection {
+  background-color: #FFD600; /* destaque amarelo */
+  color: #0A192F;           /* contraste no texto selecionado */
+}
+
+/* ===== BARRA DE ROLAGEM ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A192F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFD600;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fdd835; /* amarelo um pouco mais claro */
+}
+
+/* ===== LINKS E HOVERS ===== */
+a {
+  color: #FFD600;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #fdd835;
 }

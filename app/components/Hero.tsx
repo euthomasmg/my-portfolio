@@ -65,7 +65,7 @@ export default function Hero() {
       <Box className="flex gap-5 mt-1 mb-5">
         <IconButton
           color="inherit"
-          href="https://github.com/"
+          href="https://github.com/euthomasmg"
           target="_blank"
           sx={{
             transition: "0.3s",
@@ -77,7 +77,7 @@ export default function Hero() {
 
         <IconButton
           color="inherit"
-          href="https://linkedin.com/"
+          href="https://www.linkedin.com/in/thomasmayer03/"
           target="_blank"
           sx={{
             transition: "0.3s",
@@ -89,7 +89,7 @@ export default function Hero() {
 
         <IconButton
           color="inherit"
-          href="mailto:email@exemplo.com"
+          href="mailto:thomas2003.mayer@gmail.com"
           sx={{
             transition: "0.3s",
             "&:hover": { color: "#EA4335", transform: "scale(1.2)" },
@@ -99,14 +99,16 @@ export default function Hero() {
         </IconButton>
 
         <IconButton
-          color="inherit"
-          href="https://wa.me/seunumerowhatsapp"
-          sx={{
+        color="inherit"
+        href="https://wa.me/5551981210696?text=Ol%C3%A1%2C%20Thomas"
+        target="_blank"
+        rel="noopener noreferrer"
+        sx={{
             transition: "0.3s",
             "&:hover": { color: "#25D366", transform: "scale(1.2)" },
-          }}
+        }}
         >
-          <WhatsApp fontSize="large" />
+        <WhatsApp fontSize="large" />
         </IconButton>
       </Box>
 
