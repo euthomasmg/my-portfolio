@@ -1,63 +1,66 @@
 "use client";
 
-import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
+import { AppBar, Toolbar, Box, Button, Typography } from "@mui/material";
 import Link from "next/link";
 
 export default function Header() {
   return (
     <AppBar
       position="fixed"
+      elevation={0}
       sx={{
-        background: "linear-gradient(90deg, #0d47a1 0%, #1976d2 100%)",
-        boxShadow: "0px 2px 10px rgba(0,0,0,0.2)",
+        backgroundColor: "transparent",
+        backdropFilter: "blur(10px)",
+        borderBottom: "1px solid rgba(255,255,255,0.1)",
       }}
     >
-      <Toolbar className="max-w-6xl mx-auto flex justify-between w-full px-4">
+      <Toolbar
+        sx={{
+          maxWidth: "1200px",
+          margin: "0 auto",
+          width: "100%",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          padding: "1rem 2rem",
+        }}
+      >
+        {/* LOGO / NOME */}
         <Typography
           variant="h6"
-          sx={{
-            fontWeight: 700,
-            letterSpacing: 1.2,
-          }}
+          sx={{ fontWeight: 700, cursor: "pointer", letterSpacing: 1 }}
         >
-          Thomas<span style={{ color: "#ffeb3b" }}>.</span>
+          Thomas
         </Typography>
 
-        <Box className="flex gap-6 items-center">
+        {/* MENU DE NAVEGAÇÃO */}
+        <Box sx={{ display: "flex", gap: "2rem" }}>
           <Link href="#inicio">
-            <Button color="inherit" sx={{ fontWeight: 500 }}>
-              Início
-            </Button>
+            <Button color="inherit">Início</Button>
           </Link>
           <Link href="#sobre">
-            <Button color="inherit" sx={{ fontWeight: 500 }}>
-              Sobre
-            </Button>
+            <Button color="inherit">Sobre</Button>
           </Link>
           <Link href="#projetos">
-            <Button color="inherit" sx={{ fontWeight: 500 }}>
-              Projetos
-            </Button>
+            <Button color="inherit">Projetos</Button>
           </Link>
           <Link href="#contato">
-            <Button color="inherit" sx={{ fontWeight: 500 }}>
-              Contato
-            </Button>
+            <Button color="inherit">Contato</Button>
           </Link>
-
-          <Button
-            variant="contained"
-            sx={{
-              backgroundColor: "#ffeb3b",
-              color: "#0d47a1",
-              fontWeight: 600,
-              borderRadius: "9999px",
-              "&:hover": { backgroundColor: "#fdd835" },
-            }}
-          >
-            Fale comigo
-          </Button>
         </Box>
+
+        {/* BOTÃO DE CONTATO / AÇÃO */}
+        <Button
+          variant="outlined"
+          sx={{
+            borderRadius: "9999px",
+            textTransform: "none",
+            fontWeight: 600,
+            padding: "0.5rem 1.5rem",
+          }}
+        >
+          Fale comigo
+        </Button>
       </Toolbar>
     </AppBar>
   );
