@@ -1,60 +1,70 @@
 "use client";
 
-import { Box, Typography, Container, Avatar } from "@mui/material";
+import { Box, Typography, Container } from "@mui/material";
 
 export default function About() {
   return (
     <Box
       id="sobre"
-      className="min-h-screen flex items-center bg-gray-50"
       sx={{
-        paddingTop: { xs: "6rem", md: "8rem" },
-        paddingBottom: { xs: "4rem", md: "6rem" },
+        minHeight: "80vh", // ↓ antes 100vh → sobe um pouco a seção
+        background: "linear-gradient(180deg, #0A192F 0%, #112240 100%)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "3rem 1rem", // ↓ antes 4rem → menos espaço interno
       }}
     >
-      <Container maxWidth="lg" className="flex flex-col md:flex-row items-center gap-10">
-        <Avatar
-          src="/perfil.jpg" // substitua pela sua imagem
-          alt="Foto de Thomas"
+      <Container
+        maxWidth="md"
+        sx={{
+          textAlign: "center",
+          color: "#E6F1FF",
+          marginTop: "-1rem", // ↑ move tudo levemente pra cima
+        }}
+      >
+        {/* TÍTULO */}
+        <Typography
+          variant="h4"
           sx={{
-            width: 200,
-            height: 200,
-            boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
-            border: "4px solid #1976d2",
+            fontWeight: 700,
+            marginBottom: "2rem",
+            color: "#FFD600",
+            fontFamily: "Poppins, sans-serif",
           }}
-        />
+        >
+          Sobre mim
+        </Typography>
 
-        <Box>
-          <Typography
-            variant="h4"
-            sx={{
-              fontWeight: 700,
-              color: "#0d47a1",
-              marginBottom: "1rem",
-            }}
-          >
-            Sobre mim
-          </Typography>
-
-          <Typography
-            variant="body1"
-            sx={{
-              color: "#333",
-              lineHeight: 1.8,
-              maxWidth: 600,
-            }}
-          >
-            Olá! Sou <strong>Thomas</strong>, desenvolvedor apaixonado por tecnologia e
-            criação de interfaces modernas. Busco transformar ideias em experiências
-            digitais fluidas e elegantes, com foco em performance, design limpo e
-            usabilidade.
-            <br />
-            <br />
-            Atualmente estou aprimorando meus projetos pessoais e portfólios com
-            tecnologias como <strong>Next.js</strong>, <strong>TypeScript</strong>,
-            <strong> Material UI</strong> e <strong>TailwindCSS</strong>.
-          </Typography>
-        </Box>
+        {/* TEXTO */}
+        <Typography
+          variant="body1"
+          sx={{
+            fontSize: "1.1rem",
+            lineHeight: 1.9,
+            color: "#E6F1FF",
+            fontFamily: "Poppins, sans-serif",
+            textAlign: "justify",
+          }}
+        >
+          Olá! Me chamo <strong>Thomas Mayer Garcez</strong>, sou um
+          desenvolvedor apaixonado por tecnologia, design e criação de
+          experiências digitais intuitivas. Sempre busco unir performance,
+          estética e usabilidade em cada projeto, transformando ideias em
+          soluções práticas e modernas.
+          <br />
+          <br />
+          Atualmente, estudo novas ferramentas e aprimoro minhas habilidades em{" "}
+          <strong>Next.js</strong>, <strong>TypeScript</strong> e{" "}
+          <strong>Material UI</strong>, focando em interfaces limpas e
+          funcionais. Acredito que cada linha de código é uma oportunidade de
+          criar algo melhor — mais bonito, mais rápido e mais inteligente.
+          <br />
+          <br />
+          Meu objetivo é seguir evoluindo como profissional, contribuindo com
+          projetos que causem impacto real, tanto visual quanto funcional, e que
+          despertem aquele “uau” em quem usa. 🚀
+        </Typography>
       </Container>
     </Box>
   );

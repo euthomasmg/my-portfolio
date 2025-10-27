@@ -31,12 +31,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #FFD600;
+  background: #0c223f; /* azul escuro consistente com o tema */
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #fdd835; /* amarelo um pouco mais claro */
+  background: #112f57; /* tom levemente mais claro no hover */
 }
 
 /* ===== LINKS E HOVERS ===== */

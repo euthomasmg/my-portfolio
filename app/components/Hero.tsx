@@ -24,17 +24,17 @@ export default function Hero() {
       }}
     >
       {/* FOTO */}
-      <Avatar
+        <Avatar
         src="/perfil.jpg"
         alt="Foto de perfil"
         sx={{
-          width: 160,
-          height: 160,
-          border: "5px solid #FFD600",
-          boxShadow: "0 0 25px rgba(255, 214, 0, 0.4)",
-          marginBottom: "1.25rem", // ↓ levemente reduzido
+            width: 160,
+            height: 160,
+            border: "4px solid #0A192F", // borda preta/azul escuro
+            boxShadow: "0 0 25px rgba(0, 0, 0, 0.6)", // sombra escura suave
+            marginBottom: "1.25rem",
         }}
-      />
+        />
 
       {/* NOME */}
       <Typography
@@ -126,9 +126,8 @@ export default function Hero() {
       >
         {[
           { icon: <Person fontSize="small" />, label: "Sobre mim" },
-          { icon: <EmojiObjects fontSize="small" />, label: "Minhas Soft Skills" },
-          { icon: <Build fontSize="small" />, label: "Minhas Hard Skills" },
-          { icon: <Code fontSize="small" />, label: "Meus Projetos" },
+          { icon: <EmojiObjects fontSize="small" />, label: "Minhas Tecnologias" },
+          { icon:" </> Meus Projetos" },
         ].map((item, index) => (
           <Typography
             key={index}
