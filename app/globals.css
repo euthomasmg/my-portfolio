@@ -1,4 +1,4 @@
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -10,15 +10,15 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #0A192F; /* azul escuro do tema */
-  color: #E6F1FF;           /* texto principal do tema */
-  font-family: monospace;   /* combina com o tema MUI */
+  background-color: #0A192F;
+  color: #E6F1FF;
+  font-family: monospace;
 }
 
 /* ===== SELEÇÃO DE TEXTO ===== */
 ::selection {
-  background-color: #FFD600; /* destaque amarelo */
-  color: #0A192F;           /* contraste no texto selecionado */
+  background-color: #FFD600;
+  color: #0A192F;
 }
 
 /* ===== BARRA DE ROLAGEM ===== */
@@ -31,12 +31,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #0c223f; /* azul escuro consistente com o tema */
+  background: #0c223f;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #112f57; /* tom levemente mais claro no hover */
+  background: #112f57;
 }
 
 /* ===== LINKS E HOVERS ===== */
@@ -47,4 +47,93 @@ a {
 
 a:hover {
   color: #fdd835;
+}
+
+/* ===== HERO BACKGROUND ===== */
+.hero-background {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 25%, rgba(17, 34, 64, 0.92), rgba(10, 25, 47, 0.95));
+}
+
+@keyframes starDrift {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-8%, -18%, 0); }
+}
+
+.hero-starfield {
+  position: absolute;
+  inset: -25%;
+  background-image:
+    radial-gradient(2px 2px at 20px 20px, rgba(255, 255, 255, 0.5), transparent 45%),
+    radial-gradient(1px 1px at 60px 80px, rgba(255, 214, 0, 0.4), transparent 35%),
+    radial-gradient(1px 1px at 120px 140px, rgba(230, 241, 255, 0.5), transparent 40%);
+  background-size: 140px 140px;
+  opacity: 0.35;
+  animation: starDrift 40s linear infinite;
+}
+
+@keyframes starFloat {
+  0% { transform: translate3d(0, 0, 0); opacity: 0; }
+  15% { opacity: 0.9; }
+  100% { transform: translate3d(50px, -120px, 0); opacity: 0; }
+}
+
+.hero-constellations {
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: screen;
+}
+
+.hero-constellations span {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(230, 241, 255, 0.95);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  animation: starFloat linear infinite;
+}
+
+.hero-constellations span:nth-child(1) { top: 8%; left: 12%; animation-duration: 18s; }
+.hero-constellations span:nth-child(2) { top: 15%; left: 32%; animation-duration: 22s; animation-delay: 3s; }
+.hero-constellations span:nth-child(3) { top: 20%; right: 18%; animation-duration: 20s; animation-delay: 6s; }
+.hero-constellations span:nth-child(4) { top: 28%; left: 10%; animation-duration: 24s; animation-delay: 1s; }
+.hero-constellations span:nth-child(5) { top: 34%; right: 8%; animation-duration: 19s; animation-delay: 4s; }
+.hero-constellations span:nth-child(6) { top: 40%; left: 42%; animation-duration: 26s; animation-delay: 2.5s; }
+.hero-constellations span:nth-child(7) { top: 46%; right: 30%; animation-duration: 21s; animation-delay: 7s; }
+.hero-constellations span:nth-child(8) { top: 52%; left: 6%; animation-duration: 28s; animation-delay: 3.5s; }
+.hero-constellations span:nth-child(9) { top: 58%; right: 18%; animation-duration: 25s; animation-delay: 5s; }
+.hero-constellations span:nth-child(10) { top: 64%; left: 58%; animation-duration: 23s; animation-delay: 2s; }
+.hero-constellations span:nth-child(11) { top: 70%; right: 12%; animation-duration: 29s; animation-delay: 6.5s; }
+.hero-constellations span:nth-child(12) { top: 76%; left: 20%; animation-duration: 21s; animation-delay: 1.8s; }
+.hero-constellations span:nth-child(13) { top: 82%; right: 38%; animation-duration: 24s; animation-delay: 4.2s; }
+.hero-constellations span:nth-child(14) { top: 88%; left: 32%; animation-duration: 27s; animation-delay: 6.8s; }
+.hero-constellations span:nth-child(15) { top: 12%; left: 55%; animation-duration: 20s; animation-delay: 2.2s; }
+.hero-constellations span:nth-child(16) { top: 18%; right: 28%; animation-duration: 22s; animation-delay: 7.5s; }
+.hero-constellations span:nth-child(17) { top: 24%; left: 68%; animation-duration: 19s; animation-delay: 1.4s; }
+.hero-constellations span:nth-child(18) { top: 30%; right: 52%; animation-duration: 25s; animation-delay: 5.8s; }
+.hero-constellations span:nth-child(19) { top: 36%; left: 75%; animation-duration: 23s; animation-delay: 3.6s; }
+.hero-constellations span:nth-child(20) { top: 42%; right: 60%; animation-duration: 17s; animation-delay: 8.2s; }
+.hero-constellations span:nth-child(21) { top: 48%; left: 82%; animation-duration: 28s; animation-delay: 4.7s; }
+.hero-constellations span:nth-child(22) { top: 54%; right: 68%; animation-duration: 26s; animation-delay: 2.9s; }
+.hero-constellations span:nth-child(23) { top: 60%; left: 88%; animation-duration: 24s; animation-delay: 6.1s; }
+.hero-constellations span:nth-child(24) { top: 68%; right: 70%; animation-duration: 20s; animation-delay: 3.3s; }
+
+/* ===== ANIMAÇÕES ===== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

@@ -8,12 +8,25 @@ export default function About() {
     <Box
       id="sobre"
       sx={{
-        background: "linear-gradient(180deg, #0A192F 0%, #112240 100%)",
+        position: "relative",
+        overflow: "hidden",
+        background:
+          "linear-gradient(180deg, rgba(10,25,47,0.05) 0%, #0A192F 18%, #0E1F3A 55%, #112240 100%)",
         display: "flex",
         alignItems: "flex-start",
         justifyContent: "center",
         padding: { xs: "2.5rem 1rem 4rem", md: "4rem 2rem 5rem" },
         minHeight: { xs: "auto", md: "75vh" },
+        "&::before": {
+          content: '""',
+          position: "absolute",
+          top: "-120px",
+          left: 0,
+          right: 0,
+          height: "200px",
+          background:
+            "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(10,25,47,0.2) 35%, rgba(10,25,47,0.8) 100%)",
+        },
       }}
     >
       <Container
@@ -21,6 +34,8 @@ export default function About() {
         sx={{
           color: "#E6F1FF",
           marginTop: { xs: "-2rem", md: "-4rem" },
+          position: "relative",
+          zIndex: 1,
         }}
       >
         {/* TÍTULO */}

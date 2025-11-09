@@ -12,6 +12,7 @@ import {
   Work,
   Code,
 } from "@mui/icons-material";
+import AnimatedHeroBackground from "./AnimatedHeroBackground";
 
 export default function Hero() {
   return (
@@ -19,8 +20,20 @@ export default function Hero() {
       id="inicio"
       className="min-h-screen flex flex-col items-center justify-center text-center bg-black text-white relative overflow-hidden px-4"
       sx={{
-        paddingTop: "2rem",   // ↓ menos espaço no topo (~32px)
-        paddingBottom: "2.5rem" // ↓ menos espaço no fundo (~40px)
+        paddingTop: "2rem",
+        paddingBottom: "2.5rem",
+        position: "relative",
+        "&::after": {
+          content: '""',
+          position: "absolute",
+          left: 0,
+          right: 0,
+          bottom: 0,
+          height: "80px",
+          background:
+            "linear-gradient(180deg, rgba(10,25,47,0) 0%, rgba(10,25,47,0.65) 55%, #0A192F 100%)",
+          pointerEvents: "none",
+        },
       }}
     >
       {/* FOTO */}
@@ -151,16 +164,8 @@ export default function Hero() {
         ))}
       </Box>
 
-      {/* FUNDO ESTRELADO */}
-      <Box
-        className="absolute inset-0 -z-10"
-        sx={{
-          backgroundImage:
-            "radial-gradient(1px 1px at 20px 20px, rgba(255,255,255,0.3) 1px, transparent 0)",
-          backgroundSize: "80px 80px",
-          opacity: 0.15,
-        }}
-      />
+      <AnimatedHeroBackground />
     </Box>
   );
 }
+
