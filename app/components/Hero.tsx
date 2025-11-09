@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { Box, Typography, Avatar, IconButton } from "@mui/material";
 import {
@@ -8,11 +8,10 @@ import {
   WhatsApp,
   Person,
   EmojiObjects,
-  Build,
-  Work,
   Code,
 } from "@mui/icons-material";
 import AnimatedHeroBackground from "./AnimatedHeroBackground";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -61,7 +60,7 @@ export default function Hero() {
         Thomas Mayer Garcez
       </Typography>
 
-      {/* SUBTÍTULO */}
+      {/* SUBTÃTULO */}
       <Typography
         variant="h6"
         sx={{
@@ -74,7 +73,7 @@ export default function Hero() {
         {"</Desenvolvedor Fullstack>"}
       </Typography>
 
-      {/* ÍCONES SOCIAIS */}
+      {/* ÃCONES SOCIAIS */}
       <Box className="flex gap-5 mt-1 mb-5">
         <IconButton
           color="inherit"
@@ -125,42 +124,55 @@ export default function Hero() {
         </IconButton>
       </Box>
 
-      {/* MENU DE SEÇÕES */}
+            {/* MENU DE SECOES */}
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          gap: "1.4rem",       // ↓ espaçamento mais compacto (~22px)
-          marginTop: "3rem",   // ↓ antes 4rem (~48px)
-          marginBottom: "3rem" // ↓ antes 4rem
+          gap: "1.4rem",
+          marginTop: "3rem",
+          marginBottom: "3rem",
         }}
       >
         {[
-          { icon: <Person fontSize="small" />, label: "Sobre mim" },
-          { icon: <EmojiObjects fontSize="small" />, label: "Minhas Tecnologias" },
-          { icon:" </> Meus Projetos" },
+          {
+            icon: <Person fontSize="small" />,
+            label: "Sobre mim",
+            href: "#sobre",
+          },
+          {
+            icon: <EmojiObjects fontSize="small" />,
+            label: "Minhas Tecnologias",
+            href: "#tecnologias",
+          },
+          {
+            icon: <Code fontSize="small" />,
+            label: "Meus Projetos",
+            href: "#projetos",
+          },
         ].map((item, index) => (
-          <Typography
-            key={index}
-            component="div"
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            gap={1.5}
-            fontFamily="monospace"
-            fontWeight={500}
-            color="#ccc"
-            sx={{
-              cursor: "pointer",
-              transition: "0.3s",
-              "&:hover": { color: "#FFD600", transform: "scale(1.05)" },
-            }}
-          >
-            {item.icon}
-            {item.label}
-          </Typography>
+          <Link key={index} href={item.href} style={{ textDecoration: "none" }}>
+            <Typography
+              component="div"
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              gap={1.5}
+              fontFamily="monospace"
+              fontWeight={500}
+              color="#ccc"
+              sx={{
+                cursor: "pointer",
+                transition: "0.3s",
+                "&:hover": { color: "#FFD600", transform: "scale(1.05)" },
+              }}
+            >
+              {item.icon}
+              {item.label}
+            </Typography>
+          </Link>
         ))}
       </Box>
 
@@ -168,4 +180,6 @@ export default function Hero() {
     </Box>
   );
 }
+
+
 

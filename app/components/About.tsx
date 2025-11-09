@@ -39,19 +39,45 @@ export default function About() {
         }}
       >
         {/* TÍTULO */}
-        <Typography
-          variant="h4"
+        <Box
           sx={{
-            fontWeight: 700,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: { xs: "0.75rem", md: "1rem" },
             marginBottom: { xs: "3rem", md: "4rem" },
-            color: "#FFD600",
-            fontFamily: "Poppins, sans-serif",
-            fontSize: { xs: "1.8rem", md: "2.2rem" },
-            textAlign: "center",
           }}
         >
-          👨‍💻 Sobre mim
-        </Typography>
+          <Box
+            aria-hidden
+            sx={{
+              width: { xs: "3.3rem", md: "3.6rem" },
+              height: { xs: "3.3rem", md: "3.6rem" },
+              borderRadius: "50%",
+              background: "linear-gradient(135deg, #5BC2F4 0%, #A37DFD 100%)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              boxShadow: "0 12px 30px rgba(92, 161, 248, 0.35)",
+              fontSize: { xs: "1.8rem", md: "2.2rem" },
+              lineHeight: 1,
+            }}
+          >
+            👨🏻‍💻
+          </Box>
+          <Typography
+            variant="h4"
+            sx={{
+              fontWeight: 700,
+              color: "#FFFFFF",
+              fontFamily: "Poppins, sans-serif",
+              fontSize: { xs: "1.8rem", md: "2.2rem" },
+              textAlign: "center",
+            }}
+          >
+            Sobre mim
+          </Typography>
+        </Box>
 
         {/* CONTEÚDO */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto items-center text-center md:text-left">
