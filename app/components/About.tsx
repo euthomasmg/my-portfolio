@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Box, Typography, Container } from "@mui/material";
 
 export default function About() {
@@ -7,20 +8,19 @@ export default function About() {
     <Box
       id="sobre"
       sx={{
-        minHeight: "80vh", // ↓ antes 100vh → sobe um pouco a seção
         background: "linear-gradient(180deg, #0A192F 0%, #112240 100%)",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        padding: "3rem 1rem", // ↓ antes 4rem → menos espaço interno
+        padding: { xs: "3rem 1rem", md: "5rem 2rem" },
+        minHeight: { xs: "auto", md: "85vh" },
       }}
     >
       <Container
-        maxWidth="md"
+        maxWidth="lg"
         sx={{
-          textAlign: "center",
           color: "#E6F1FF",
-          marginTop: "-1rem", // ↑ move tudo levemente pra cima
+          marginTop: { xs: "0", md: "-1rem" },
         }}
       >
         {/* TÍTULO */}
@@ -28,43 +28,89 @@ export default function About() {
           variant="h4"
           sx={{
             fontWeight: 700,
-            marginBottom: "2rem",
+            marginBottom: { xs: "3rem", md: "4rem" },
             color: "#FFD600",
             fontFamily: "Poppins, sans-serif",
+            fontSize: { xs: "1.8rem", md: "2.2rem" },
+            textAlign: "center",
           }}
         >
-          Sobre mim
+          👨‍💻 Sobre mim
         </Typography>
 
-        {/* TEXTO */}
-        <Typography
-          variant="body1"
-          sx={{
-            fontSize: "1.1rem",
-            lineHeight: 1.9,
-            color: "#E6F1FF",
-            fontFamily: "Poppins, sans-serif",
-            textAlign: "justify",
-          }}
-        >
-          Olá! Me chamo <strong>Thomas Mayer Garcez</strong>, sou um
-          desenvolvedor apaixonado por tecnologia, design e criação de
-          experiências digitais intuitivas. Sempre busco unir performance,
-          estética e usabilidade em cada projeto, transformando ideias em
-          soluções práticas e modernas.
-          <br />
-          <br />
-          Atualmente, estudo novas ferramentas e aprimoro minhas habilidades em{" "}
-          <strong>Next.js</strong>, <strong>TypeScript</strong> e{" "}
-          <strong>Material UI</strong>, focando em interfaces limpas e
-          funcionais. Acredito que cada linha de código é uma oportunidade de
-          criar algo melhor — mais bonito, mais rápido e mais inteligente.
-          <br />
-          <br />
-          Meu objetivo é seguir evoluindo como profissional, contribuindo com
-          projetos que causem impacto real, tanto visual quanto funcional, e que
-          despertem aquele “uau” em quem usa. 🚀
-        </Typography>
+        {/* CONTEÚDO */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto items-center text-center md:text-left">
+          {/* FOTO DE PERFIL */}
+          <div className="flex justify-center md:justify-end">
+            <div className="relative w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-yellow-400 shadow-lg shadow-yellow-900/30">
+              <Image
+                src="/foto.jpeg" // coloque sua imagem na pasta public
+                alt="Foto de Thomas Mayer Garcez"
+                fill
+                style={{ objectFit: "cover" }}
+                priority
+              />
+            </div>
+          </div>
+
+          {/* TEXTO */}
+          <div className="space-y-6">
+            <Typography
+              sx={{
+                fontFamily: "Poppins, sans-serif",
+                fontSize: { xs: "1rem", md: "1.1rem" },
+                lineHeight: 1.8,
+                color: "#E6F1FF",
+              }}
+            >
+              Sou <strong>Thomas Mayer Garcez</strong>, um desenvolvedor{" "}
+              apaixonado por tecnologia e design. Gosto de criar interfaces{" "}
+              <strong>modernas, rápidas e funcionais</strong>, transformando
+              ideias em experiências reais. 🚀
+            </Typography>
+
+            <Typography
+              sx={{
+                fontFamily: "Poppins, sans-serif",
+                fontSize: { xs: "1rem", md: "1.1rem" },
+                lineHeight: 1.8,
+                color: "#E6F1FF",
+              }}
+            >
+              Acredito que cada linha de código é uma chance de{" "}
+              <strong>resolver problemas</strong> e{" "}
+              <strong>impactar pessoas</strong>. Busco sempre aprender novas
+              ferramentas e aprimorar minha lógica de desenvolvimento. ⚙️
+            </Typography>
+
+            <Typography
+              sx={{
+                fontFamily: "Poppins, sans-serif",
+                fontSize: { xs: "1rem", md: "1.1rem" },
+                lineHeight: 1.8,
+                color: "#E6F1FF",
+              }}
+            >
+              Estou constantemente explorando tecnologias como{" "}
+              <strong>Next.js</strong>, <strong>TypeScript</strong> e{" "}
+              <strong>Material UI</strong>, buscando criar algo melhor a cada
+              projeto. 💻
+            </Typography>
+
+            <Typography
+              sx={{
+                fontFamily: "Poppins, sans-serif",
+                fontSize: { xs: "1rem", md: "1.1rem" },
+                lineHeight: 1.8,
+                color: "#E6F1FF",
+              }}
+            >
+              Fora do código, curto ouvir música, aprender sobre design e
+              inovação — sempre buscando novas formas de unir{" "}
+              <strong>criatividade e tecnologia</strong>. 💫
+            </Typography>
+          </div>
+        </div>
       </Container>
     </Box>
   );
