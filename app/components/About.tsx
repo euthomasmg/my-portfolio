@@ -10,17 +10,17 @@ export default function About() {
       sx={{
         background: "linear-gradient(180deg, #0A192F 0%, #112240 100%)",
         display: "flex",
-        alignItems: "center",
+        alignItems: "flex-start",
         justifyContent: "center",
-        padding: { xs: "3rem 1rem", md: "5rem 2rem" },
-        minHeight: { xs: "auto", md: "85vh" },
+        padding: { xs: "2.5rem 1rem 4rem", md: "4rem 2rem 5rem" },
+        minHeight: { xs: "auto", md: "75vh" },
       }}
     >
       <Container
         maxWidth="lg"
         sx={{
           color: "#E6F1FF",
-          marginTop: { xs: "0", md: "-1rem" },
+          marginTop: { xs: "-2rem", md: "-4rem" },
         }}
       >
         {/* TÍTULO */}
