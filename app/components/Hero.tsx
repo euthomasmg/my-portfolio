@@ -81,7 +81,7 @@ export default function Hero() {
           target="_blank"
           sx={{
             transition: "0.3s",
-            "&:hover": { color: "#FFD600", transform: "scale(1.2)" },
+            "&:hover": { color: "#000000", transform: "scale(1.2)" },
           }}
         >
           <GitHub fontSize="large" />
