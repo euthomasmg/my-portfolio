@@ -11,7 +11,7 @@ export default function About() {
         position: "relative",
         overflow: "hidden",
         background:
-          "linear-gradient(180deg, rgba(10,25,47,0.05) 0%, #0A192F 18%, #0E1F3A 55%, #112240 100%)",
+          "linear-gradient(180deg, rgba(10,25,47,0.02) 0%, rgba(14,32,58,0.2) 40%, rgba(17,40,70,0.45) 100%)",
         display: "flex",
         alignItems: "flex-start",
         justifyContent: "center",
@@ -25,7 +25,7 @@ export default function About() {
           right: 0,
           height: "200px",
           background:
-            "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(10,25,47,0.2) 35%, rgba(10,25,47,0.8) 100%)",
+            "linear-gradient(180deg, rgba(10,25,47,0) 0%, rgba(10,25,47,0.08) 50%, rgba(10,25,47,0.25) 100%)",
         },
       }}
     >
