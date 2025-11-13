@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { Box, Typography, Container } from "@mui/material";
 
@@ -67,13 +67,13 @@ export default function About() {
           >
             <Box
               sx={{
-                fontSize: { xs: "4.8rem", md: "5.4rem" },
+                fontSize: { xs: "7.1rem", md: "8rem" },
                 lineHeight: 1,
                 textShadow: "0 18px 30px rgba(0,0,0,0.5)",
               }}
               aria-hidden
             >
-              {"🧑‍💻"}
+              {"👨🏻‍💻"}
             </Box>
 
             {[
@@ -125,7 +125,7 @@ export default function About() {
                 }}
               >
                 Sou Thomas Mayer Garcez, um desenvolvedor apaixonado por
-                tecnologia e design. Gosto de criar interfaces modernas,
+                tecnologia. Gosto de criar interfaces modernas,
                 rápidas e funcionais, transformando ideias em experiências
                 reais. 🚀
               </Typography>
@@ -175,3 +175,5 @@ export default function About() {
     </Box>
   );
 }
+
+
