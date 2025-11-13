@@ -107,7 +107,14 @@ export default function About() {
             ))}
           </Box>
           {/* TEXTO */}
-          <Box sx={{ width: "100%", flex: 1 }}>
+          <Box
+            sx={{
+              width: "100%",
+              flex: 1,
+              maxWidth: { xs: "100%", md: "620px" },
+              margin: { xs: "0 auto", md: "0" },
+            }}
+          >
             <div className="space-y-5 text-center md:text-left">
               <Typography
                 sx={{

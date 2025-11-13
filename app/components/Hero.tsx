@@ -164,6 +164,7 @@ export default function Hero() {
               fontWeight={500}
               color="#ccc"
               sx={{
+                fontSize: { xs: "1.15rem", md: "1.3rem" },
                 cursor: "pointer",
                 transition: "0.3s",
                 "&:hover": { color: "#FFD600", transform: "scale(1.05)" },
