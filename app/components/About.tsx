@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { Box, Typography, Container } from "@mui/material";
 
 export default function About() {
@@ -38,120 +37,133 @@ export default function About() {
           zIndex: 1,
         }}
       >
-        {/* TÍTULO */}
         <Box
           sx={{
             display: "flex",
+            flexDirection: { xs: "column", md: "row" },
             alignItems: "center",
             justifyContent: "center",
-            gap: { xs: "0.75rem", md: "1rem" },
-            marginBottom: { xs: "3rem", md: "4rem" },
+            gap: { xs: "2rem", md: "2.75rem" },
+            maxWidth: "1100px",
+            margin: "0 auto",
           }}
         >
+          {/* ILUSTRAÇÃO */}
           <Box
-            aria-hidden
             sx={{
-              width: { xs: "3.3rem", md: "3.6rem" },
-              height: { xs: "3.3rem", md: "3.6rem" },
-              borderRadius: "50%",
-              background: "linear-gradient(135deg, #5BC2F4 0%, #A37DFD 100%)",
+              position: "relative",
+              width: { xs: 220, md: 260 },
+              height: { xs: 220, md: 260 },
+              margin: "0 auto",
+              borderRadius: "28px",
+              background: "linear-gradient(140deg, #0d1a2f, #142b4d)",
+              border: "1px solid rgba(255,255,255,0.08)",
+              boxShadow: "0 18px 35px rgba(4,7,20,0.55)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              boxShadow: "0 12px 30px rgba(92, 161, 248, 0.35)",
-              fontSize: { xs: "1.8rem", md: "2.2rem" },
-              lineHeight: 1,
+              flexShrink: 0,
             }}
           >
-            👨🏻‍💻
+            <Box
+              sx={{
+                fontSize: { xs: "4.8rem", md: "5.4rem" },
+                lineHeight: 1,
+                textShadow: "0 18px 30px rgba(0,0,0,0.5)",
+              }}
+              aria-hidden
+            >
+              {"🧑‍💻"}
+            </Box>
+
+            {[
+              { label: "HTML", color: "#F97316", top: "10%", left: "-55px" },
+              { label: "CSS", color: "#3B82F6", top: "40%", left: "-60px" },
+              { label: "JS", color: "#EAB308", top: "70%", left: "-48px" },
+              { label: "React", color: "#06B6D4", top: "10%", right: "-55px" },
+              { label: "Next", color: "#0EA5E9", top: "40%", right: "-60px" },
+              { label: "UI", color: "#8B5CF6", top: "70%", right: "-48px" },
+            ].map((chip) => (
+              <Box
+                key={chip.label}
+                sx={{
+                  position: "absolute",
+                  top: chip.top,
+                  left: chip.left,
+                  right: chip.right,
+                  backgroundColor: "rgba(6,12,24,0.9)",
+                  border: "1px solid rgba(255,255,255,0.1)",
+                  borderRadius: "999px",
+                  padding: "0.3rem 0.85rem",
+                  fontSize: "0.76rem",
+                  fontFamily: "Poppins, sans-serif",
+                  color: chip.color,
+                  letterSpacing: 0.5,
+                  boxShadow: "0 8px 16px rgba(0,0,0,0.35)",
+                }}
+              >
+                {chip.label}
+              </Box>
+            ))}
           </Box>
-          <Typography
-            variant="h4"
-            sx={{
-              fontWeight: 700,
-              color: "#FFFFFF",
-              fontFamily: "Poppins, sans-serif",
-              fontSize: { xs: "1.8rem", md: "2.2rem" },
-              textAlign: "center",
-            }}
-          >
-            Sobre mim
-          </Typography>
-        </Box>
-
-        {/* CONTEÚDO */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto items-center text-center md:text-left">
-          {/* FOTO DE PERFIL */}
-          <div className="flex justify-center md:justify-end">
-            <div className="relative w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-yellow-400 shadow-lg shadow-yellow-900/30">
-              <Image
-                src="/foto.jpeg" // coloque sua imagem na pasta public
-                alt="Foto de Thomas Mayer Garcez"
-                fill
-                style={{ objectFit: "cover" }}
-                priority
-              />
-            </div>
-          </div>
-
           {/* TEXTO */}
-          <div className="space-y-6">
-            <Typography
-              sx={{
-                fontFamily: "Poppins, sans-serif",
-                fontSize: { xs: "1rem", md: "1.1rem" },
-                lineHeight: 1.8,
-                color: "#E6F1FF",
-              }}
-            >
-              Sou <strong>Thomas Mayer Garcez</strong>, um desenvolvedor{" "}
-              apaixonado por tecnologia e design. Gosto de criar interfaces{" "}
-              <strong>modernas, rápidas e funcionais</strong>, transformando
-              ideias em experiências reais. 🚀
-            </Typography>
+          <Box sx={{ width: "100%", flex: 1 }}>
+            <div className="space-y-5 text-center md:text-left">
+              <Typography
+                sx={{
+                  fontFamily: "Poppins, sans-serif",
+                  fontSize: { xs: "1.05rem", md: "1.15rem" },
+                  lineHeight: 1.7,
+                  color: "#E6F1FF",
+                }}
+              >
+                Sou Thomas Mayer Garcez, um desenvolvedor apaixonado por
+                tecnologia e design. Gosto de criar interfaces modernas,
+                rápidas e funcionais, transformando ideias em experiências
+                reais. 🚀
+              </Typography>
 
-            <Typography
-              sx={{
-                fontFamily: "Poppins, sans-serif",
-                fontSize: { xs: "1rem", md: "1.1rem" },
-                lineHeight: 1.8,
-                color: "#E6F1FF",
-              }}
-            >
-              Acredito que cada linha de código é uma chance de{" "}
-              <strong>resolver problemas</strong> e{" "}
-              <strong>impactar pessoas</strong>. Busco sempre aprender novas
-              ferramentas e aprimorar minha lógica de desenvolvimento. ⚙️
-            </Typography>
+              <Typography
+                sx={{
+                  fontFamily: "Poppins, sans-serif",
+                  fontSize: { xs: "1rem", md: "1.1rem" },
+                  lineHeight: 1.7,
+                  color: "#E6F1FF",
+                }}
+              >
+                Acredito que cada linha de código é uma chance de resolver
+                problemas e impactar pessoas. Busco sempre aprender novas
+                ferramentas e aprimorar minha lógica de desenvolvimento. ⚙️
+              </Typography>
 
-            <Typography
-              sx={{
-                fontFamily: "Poppins, sans-serif",
-                fontSize: { xs: "1rem", md: "1.1rem" },
-                lineHeight: 1.8,
-                color: "#E6F1FF",
-              }}
-            >
-              Estou constantemente explorando tecnologias como{" "}
-              <strong>Next.js</strong>, <strong>TypeScript</strong> e{" "}
-              <strong>Material UI</strong>, buscando criar algo melhor a cada
-              projeto. 💻
-            </Typography>
+              <Typography
+                sx={{
+                  fontFamily: "Poppins, sans-serif",
+                  fontSize: { xs: "1rem", md: "1.1rem" },
+                  lineHeight: 1.7,
+                  color: "#E6F1FF",
+                }}
+              >
+                Estou constantemente explorando tecnologias como Next.js,
+                TypeScript e Material UI, buscando criar algo melhor a cada
+                projeto. 💻
+              </Typography>
 
-            <Typography
-              sx={{
-                fontFamily: "Poppins, sans-serif",
-                fontSize: { xs: "1rem", md: "1.1rem" },
-                lineHeight: 1.8,
-                color: "#E6F1FF",
-              }}
-            >
-              Fora do código, curto ouvir música, aprender sobre design e
-              inovação — sempre buscando novas formas de unir{" "}
-              <strong>criatividade e tecnologia</strong>. 💫
-            </Typography>
-          </div>
-        </div>
+              <Typography
+                sx={{
+                  fontFamily: "Poppins, sans-serif",
+                  fontSize: { xs: "1rem", md: "1.1rem" },
+                  lineHeight: 1.7,
+                  color: "#E6F1FF",
+                }}
+              >
+                Fora do código, curto ouvir música, aprender sobre design e
+                inovação — sempre buscando novas formas de unir criatividade e
+                tecnologia. 💫
+              </Typography>
+            </div>
+          </Box>
+        </Box>
       </Container>
     </Box>
   );
