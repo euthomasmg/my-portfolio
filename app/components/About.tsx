@@ -157,7 +157,6 @@ export default function About() {
                   color: "#E6F1FF",
                 }}
               >
-                Fora do código, curto ouvir música, aprender sobre design e inovação - sempre buscando novas formas de unir criatividade e tecnologia. 🎧
               </Typography>
 
               <Box
