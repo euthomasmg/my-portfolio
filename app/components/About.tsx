@@ -1,6 +1,6 @@
-﻿"use client";
+"use client";
 
-import { Box, Typography, Container } from "@mui/material";
+import { Box, Typography, Container, Button } from "@mui/material";
 
 export default function About() {
   return (
@@ -52,8 +52,8 @@ export default function About() {
           <Box
             sx={{
               position: "relative",
-              width: { xs: 220, md: 260 },
-              height: { xs: 220, md: 260 },
+              width: { xs: 250, md: 290 },
+              height: { xs: 250, md: 290 },
               margin: "0 auto",
               borderRadius: "28px",
               background: "linear-gradient(140deg, #0d1a2f, #142b4d)",
@@ -67,7 +67,7 @@ export default function About() {
           >
             <Box
               sx={{
-                fontSize: { xs: "7.1rem", md: "8rem" },
+                fontSize: { xs: "8.4rem", md: "9.4rem" },
                 lineHeight: 1,
                 textShadow: "0 18px 30px rgba(0,0,0,0.5)",
               }}
@@ -77,12 +77,12 @@ export default function About() {
             </Box>
 
             {[
-              { label: "HTML", color: "#F97316", top: "10%", left: "-55px" },
-              { label: "CSS", color: "#3B82F6", top: "40%", left: "-60px" },
-              { label: "JS", color: "#EAB308", top: "70%", left: "-48px" },
-              { label: "React", color: "#06B6D4", top: "10%", right: "-55px" },
-              { label: "Next", color: "#0EA5E9", top: "40%", right: "-60px" },
-              { label: "UI", color: "#8B5CF6", top: "70%", right: "-48px" },
+              { label: "HTML", color: "#F97316", top: "10%", left: "-62px" },
+              { label: "CSS", color: "#3B82F6", top: "40%", left: "-68px" },
+              { label: "JS", color: "#EAB308", top: "70%", left: "-54px" },
+              { label: "React", color: "#06B6D4", top: "10%", right: "-62px" },
+              { label: "Next", color: "#0EA5E9", top: "40%", right: "-68px" },
+              { label: "UI", color: "#8B5CF6", top: "70%", right: "-54px" },
             ].map((chip) => (
               <Box
                 key={chip.label}
@@ -94,8 +94,8 @@ export default function About() {
                   backgroundColor: "rgba(6,12,24,0.9)",
                   border: "1px solid rgba(255,255,255,0.1)",
                   borderRadius: "999px",
-                  padding: "0.3rem 0.85rem",
-                  fontSize: "0.76rem",
+                  padding: "0.4rem 1rem",
+                  fontSize: "0.9rem",
                   fontFamily: "Poppins, sans-serif",
                   color: chip.color,
                   letterSpacing: 0.5,
@@ -115,7 +115,7 @@ export default function About() {
               margin: { xs: "0 auto", md: "0" },
             }}
           >
-            <div className="space-y-5 text-center md:text-left">
+            <Box className="space-y-5 text-center md:text-left">
               <Typography
                 sx={{
                   fontFamily: "Poppins, sans-serif",
@@ -124,10 +124,7 @@ export default function About() {
                   color: "#E6F1FF",
                 }}
               >
-                Sou Thomas Mayer Garcez, um desenvolvedor apaixonado por
-                tecnologia. Gosto de criar interfaces modernas,
-                rápidas e funcionais, transformando ideias em experiências
-                reais. 🚀
+                Sou Thomas Mayer Garcez, um desenvolvedor apaixonado por tecnologia. Gosto de criar interfaces modernas, rápidas e funcionais, transformando ideias em experiências reais. 🚀
               </Typography>
 
               <Typography
@@ -138,9 +135,7 @@ export default function About() {
                   color: "#E6F1FF",
                 }}
               >
-                Acredito que cada linha de código é uma chance de resolver
-                problemas e impactar pessoas. Busco sempre aprender novas
-                ferramentas e aprimorar minha lógica de desenvolvimento. ⚙️
+                Acredito que cada linha de código é uma chance de resolver problemas e impactar pessoas. Busco sempre aprender novas ferramentas e aprimorar minha lógica de desenvolvimento. 💡
               </Typography>
 
               <Typography
@@ -151,9 +146,7 @@ export default function About() {
                   color: "#E6F1FF",
                 }}
               >
-                Estou constantemente explorando tecnologias como Next.js,
-                TypeScript e Material UI, buscando criar algo melhor a cada
-                projeto. 💻
+                Estou constantemente explorando tecnologias como Next.js, TypeScript e Material UI, buscando criar algo melhor a cada projeto. ✨
               </Typography>
 
               <Typography
@@ -164,16 +157,40 @@ export default function About() {
                   color: "#E6F1FF",
                 }}
               >
-                Fora do código, curto ouvir música, aprender sobre design e
-                inovação — sempre buscando novas formas de unir criatividade e
-                tecnologia. 💫
+                Fora do código, curto ouvir música, aprender sobre design e inovação - sempre buscando novas formas de unir criatividade e tecnologia. 🎧
               </Typography>
-            </div>
+
+              <Box
+                sx={{
+                  marginTop: "1.5rem",
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                <Button
+                  variant="contained"
+                  sx={{
+                    background:
+                      "linear-gradient(120deg, rgba(14,165,233,0.15), rgba(14,165,233,0.5))",
+                    border: "1px solid rgba(14,165,233,0.4)",
+                    color: "#E6F1FF",
+                    padding: "0.65rem 1.75rem",
+                    borderRadius: "999px",
+                    fontFamily: "Poppins, sans-serif",
+                    letterSpacing: 0.6,
+                    "&:hover": {
+                      background:
+                        "linear-gradient(120deg, rgba(14,165,233,0.3), rgba(14,165,233,0.75))",
+                    },
+                  }}
+                >
+                  Baixar CV
+                </Button>
+              </Box>
+            </Box>
           </Box>
         </Box>
       </Container>
     </Box>
   );
 }
-
-
