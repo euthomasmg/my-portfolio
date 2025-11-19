@@ -17,11 +17,12 @@ export default function Hero() {
   return (
     <Box
       id="inicio"
-      className="min-h-screen flex flex-col items-center justify-center text-center bg-black text-white relative overflow-hidden px-4"
+      className="min-h-screen flex flex-col items-center justify-center text-center text-white relative overflow-hidden px-4"
       sx={{
         paddingTop: "2rem",
         paddingBottom: "2.5rem",
         position: "relative",
+        background: "transparent",
         "&::after": {
           content: '""',
           position: "absolute",
@@ -30,7 +31,7 @@ export default function Hero() {
           bottom: 0,
           height: "80px",
           background:
-            "linear-gradient(180deg, rgba(10,25,47,0) 0%, rgba(10,25,47,0.65) 55%, #0A192F 100%)",
+            "linear-gradient(180deg, rgba(10,25,47,0) 0%, rgba(10,25,47,0.8) 60%, #0a192f 100%)",
           pointerEvents: "none",
         },
       }}

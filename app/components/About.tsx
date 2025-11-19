@@ -26,6 +26,17 @@ export default function About() {
           background:
             "linear-gradient(180deg, rgba(10,25,47,0) 0%, rgba(10,25,47,0.08) 50%, rgba(10,25,47,0.25) 100%)",
         },
+        "&::after": {
+          content: '""',
+          position: "absolute",
+          bottom: "-1px",
+          left: 0,
+          right: 0,
+          height: "320px",
+          background:
+            "linear-gradient(180deg, rgba(17,40,70,0) 0%, rgba(17,40,70,0.25) 30%, rgba(13,31,56,1) 100%)",
+          pointerEvents: "none",
+        },
       }}
     >
       <Container
