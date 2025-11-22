@@ -44,8 +44,8 @@ export default function Projects() {
         background:
           "linear-gradient(180deg, rgba(13,31,56,1) 0%, rgba(13,31,56,0.92) 35%, rgba(10,25,47,0.55) 100%)",
         backgroundColor: "rgba(13,31,56,1)",
-        pt: { xs: "calc(3.5rem + 12px)", md: "calc(5rem + 12px)" },
-        pb: { xs: "3.5rem", md: "5rem" },
+        pt: { xs: "calc(2.6rem + 8px)", md: "calc(3.8rem + 8px)" },
+        pb: { xs: "3.25rem", md: "4.5rem" },
         px: { xs: "1rem", md: "2rem" },
         position: "relative",
         overflow: "hidden",

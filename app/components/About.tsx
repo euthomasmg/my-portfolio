@@ -43,7 +43,8 @@ export default function About() {
         maxWidth="lg"
         sx={{
           color: "#E6F1FF",
-          marginTop: { xs: "-2rem", md: "-4rem" },
+          // Sobe a seção sem cortar conteúdo (respeita o padding superior)
+          marginTop: { xs: "-0.5rem", md: "-1rem" },
           position: "relative",
           zIndex: 1,
         }}
