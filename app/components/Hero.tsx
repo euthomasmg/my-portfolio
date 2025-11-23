@@ -38,11 +38,11 @@ export default function Hero() {
     >
       {/* FOTO */}
         <Avatar
-        src="/perfil.jpg"
+        src="/foto.jpeg"
         alt="Foto de perfil"
         sx={{
-            width: 160,
-            height: 160,
+            width: 190,
+            height: 190,
             border: "4px solid #0A192F", // borda preta/azul escuro
             boxShadow: "0 0 25px rgba(0, 0, 0, 0.6)", // sombra escura suave
             marginBottom: "1.25rem",
