@@ -55,7 +55,7 @@ export default function About() {
             flexDirection: { xs: "column", md: "row" },
             alignItems: "center",
             justifyContent: "center",
-            gap: { xs: "2rem", md: "2.75rem" },
+            gap: { xs: "1.9rem", md: "2.35rem" },
             maxWidth: "1100px",
             margin: "0 auto",
           }}
@@ -64,13 +64,13 @@ export default function About() {
           <Box
             sx={{
               position: "relative",
-              width: { xs: 250, md: 290 },
-              height: { xs: 250, md: 290 },
+              width: { xs: 240, md: 270 },
+              height: { xs: 240, md: 270 },
               margin: "0 auto",
-              borderRadius: "28px",
+              borderRadius: "24px",
               background: "linear-gradient(140deg, #0d1a2f, #142b4d)",
               border: "1px solid rgba(255,255,255,0.08)",
-              boxShadow: "0 18px 35px rgba(4,7,20,0.55)",
+              boxShadow: "0 15px 30px rgba(4,7,20,0.5)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -79,7 +79,7 @@ export default function About() {
           >
             <Box
               sx={{
-                fontSize: { xs: "8.4rem", md: "9.4rem" },
+                fontSize: { xs: "7.8rem", md: "8.6rem" },
                 lineHeight: 1,
                 textShadow: "0 18px 30px rgba(0,0,0,0.5)",
               }}
@@ -89,12 +89,12 @@ export default function About() {
             </Box>
 
             {[
-              { label: "HTML", color: "#F97316", top: "10%", left: "-62px" },
-              { label: "CSS", color: "#3B82F6", top: "40%", left: "-68px" },
-              { label: "JS", color: "#EAB308", top: "70%", left: "-54px" },
-              { label: "React", color: "#06B6D4", top: "10%", right: "-62px" },
-              { label: "Next", color: "#0EA5E9", top: "40%", right: "-68px" },
-              { label: "UI", color: "#8B5CF6", top: "70%", right: "-54px" },
+              { label: "HTML", color: "#F97316", top: "9%", left: "-55px" },
+              { label: "CSS", color: "#3B82F6", top: "38%", left: "-60px" },
+              { label: "JS", color: "#EAB308", top: "67%", left: "-50px" },
+              { label: "React", color: "#06B6D4", top: "9%", right: "-55px" },
+              { label: "Next", color: "#0EA5E9", top: "38%", right: "-60px" },
+              { label: "UI", color: "#8B5CF6", top: "67%", right: "-50px" },
             ].map((chip) => (
               <Box
                 key={chip.label}
@@ -106,12 +106,12 @@ export default function About() {
                   backgroundColor: "rgba(6,12,24,0.9)",
                   border: "1px solid rgba(255,255,255,0.1)",
                   borderRadius: "999px",
-                  padding: "0.4rem 1rem",
-                  fontSize: "0.9rem",
+                  padding: "0.38rem 0.95rem",
+                  fontSize: "0.86rem",
                   fontFamily: "Poppins, sans-serif",
                   color: chip.color,
                   letterSpacing: 0.5,
-                  boxShadow: "0 8px 16px rgba(0,0,0,0.35)",
+                  boxShadow: "0 7px 15px rgba(0,0,0,0.34)",
                 }}
               >
                 {chip.label}

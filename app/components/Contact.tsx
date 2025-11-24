@@ -45,8 +45,7 @@ export default function Contact() {
             fontSize: { xs: "1rem", md: "1.05rem" },
           }}
         >
-          Se curtiu o que viu, vamos conversar sobre oportunidades, freelas ou
-          colaborações. Respondo rápido.
+          Se curtiu o que viu, vamos conversar sobre oportunidades!
         </Typography>
 
         <Stack
